@@ -11,12 +11,11 @@ export default function FoodBox(props) {
 
 let {food} = props;
 const {btnClick} = props;
-const {quantity, setQuantity} = useState()
+const [quantity, setQuantity] = useState()
 
 function handleQuantity (event){
   setQuantity(event.target.value)
 }
-
   return (
     
       <div className="box">
@@ -40,7 +39,7 @@ function handleQuantity (event){
           <input value ={quantity} onChange={handleQuantity} className="input" type="number" />
         </div>
         <div className="control">
-          <button onClick= {() => {btnClick(food, quantity)} }className="button is-info">
+          <button onClick= {() => {btnClick(food, quantity)} } className="button is-info">
             +
           </button>
         </div>
